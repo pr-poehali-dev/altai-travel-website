@@ -73,6 +73,9 @@ const Index = () => {
             <button onClick={() => scrollToSection("routes")} className="text-foreground hover:text-primary transition-colors">
               Маршруты
             </button>
+            <button onClick={() => navigate("/gallery")} className="text-foreground hover:text-primary transition-colors">
+              Галерея
+            </button>
           </div>
           <Button variant="default" className="hidden md:flex" onClick={() => navigate("/booking")}>
             Забронировать
