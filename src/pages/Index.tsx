@@ -1,8 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
@@ -72,7 +74,7 @@ const Index = () => {
               Маршруты
             </button>
           </div>
-          <Button variant="default" className="hidden md:flex">
+          <Button variant="default" className="hidden md:flex" onClick={() => navigate("/booking")}>
             Забронировать
           </Button>
         </div>
@@ -224,7 +226,7 @@ const Index = () => {
                   </ul>
                 </div>
 
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white shadow-lg">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white shadow-lg" onClick={() => navigate("/booking")}>
                   <Icon name="Calendar" size={18} className="mr-2" />
                   Забронировать тур
                 </Button>
